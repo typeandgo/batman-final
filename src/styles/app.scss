@@ -1,0 +1,39 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Custom CSS
+
+.container {
+  padding: 20px 0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  line-height: 30px;
+  border-radius: 0.3rem;
+
+  .brand-logo {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+  }
+}
+
+.card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.list-group {
+  width: 300px;
+}
+
+.bottom-nav {
+  width: 200px;
+  margin: 20px auto;
+
+  .btn-go-back {
+    width: 100%;
+  }
+}
