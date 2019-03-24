@@ -14,7 +14,7 @@ const NotFound = ({ staticContext = {} }) => {
         <title>Batman Tv Shows - Page Not Found</title>
       </Helmet>
 
-      <div className='card'>
+      <div className='card app-content'>
         <div className='card-body text-center'>
           <p>Page not found!</p>
         </div>

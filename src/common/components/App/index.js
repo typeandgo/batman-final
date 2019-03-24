@@ -5,11 +5,11 @@ import Header from '../Header';
 
 const App = ({ route }) => {
   return (
-    <div className="container">
+    <div className="container app-container">
 
       <Header />
 
-      <div className='jumbotron'>
+      <div className='jumbotron app-body'>
 
         { renderRoutes(route.routes) }
         

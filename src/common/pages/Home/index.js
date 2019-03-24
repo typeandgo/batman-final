@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import { fetchTvShows } from '../../store/actions';
+import ListItem from '../../components/ListItem';
 
 class Home extends Component {
   
@@ -25,29 +25,24 @@ class Home extends Component {
       );
     } else {
       listTemplate = tvShows.map(tvShow => (
-        <li key={ tvShow.id } className='list-group-item'>
-          <Link to={ `/episode/${tvShow.id}` }>
-            { tvShow.name }
-          </Link>
-        </li>
+        <ListItem key={ tvShow.id } data={ tvShow } />
       ));
     }
 
     return (
-      <div>
-        
+      <Fragment>
         <Helmet>
           <title>Batman Tv Shows - Home Page</title>
         </Helmet>
 
-        <div className='card'>
+        <div className='card app-content'>
           <ul className='list-group list-group-flush mx-auto'>
 
             { listTemplate }
             
           </ul>
         </div>
-      </div>
+      </Fragment>
     );
   }
 }

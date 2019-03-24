@@ -21,6 +21,11 @@ const Routes = [
         loadData: loadDataHome
       },
       {
+        path: '/episode',
+        exact: true,
+        component: Episode
+      },
+      {
         path: '/episode/:id',
         exact: true,
         component: Episode,

@@ -19,3 +19,13 @@ npm run build
 ```
 
 Bu komut gerekli bundle ve chunk'ları üretir ve chunk'lara hash ekler. Yapılan değişiklikleri izlemez. Production çıktısı üretir.
+
+# ecmascript yazım hatası denetimi
+```
+npm run eslint
+```
+
+# style yazım hatası denetimi
+```
+npm run stylelint
+```
