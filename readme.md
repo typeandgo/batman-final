@@ -1,6 +1,7 @@
 # Projenin local ortama kurulması
 ```
 git clone https://github.com/typeandgo/batman-final.git
+cd batman-final
 npm init
 ```
 
