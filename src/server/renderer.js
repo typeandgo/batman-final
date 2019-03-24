@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import Loadable from 'react-loadable';
 import { getBundles } from 'react-loadable/webpack';
 import stats from '../../dist/react-loadable.json';
-import Routes from '../common/routes';
+import Routes from 'Common/routes';
 import { isDev } from '../utils/isDev';
 
 export default (req, store, context) => {

@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { fetchEpisode, clearEpisode } from '../../store/actions';
-import BottomNav from '../../components/BottomNav';
+import { fetchEpisode, clearEpisode } from 'Common/store/actions';
+import BottomNav from 'Common/components/BottomNav';
 
 class Episode extends Component {
   

@@ -9,7 +9,7 @@ const Home = Loadable({ loader: () => import(/* webpackChunkName: "home" */'Comm
 const Episode = Loadable({ loader: () => import(/* webpackChunkName: "episode" */'Common/pages/Episode'), loading });
 const NotFound = Loadable({ loader: () => import(/* webpackChunkName: "notFound" */'Common/pages/NotFound'), loading });
 
-const Routes = [
+export default [
   {
     path: '/',
     component: App,
@@ -21,13 +21,7 @@ const Routes = [
         loadData: loadDataHome
       },
       {
-        path: '/episode',
-        exact: true,
-        component: Episode
-      },
-      {
         path: '/episode/:id',
-        exact: true,
         component: Episode,
         loadData: loadDataEpisode
       },
@@ -37,5 +31,3 @@ const Routes = [
     ]
   }
 ];
-
-export default Routes;

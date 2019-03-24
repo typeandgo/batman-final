@@ -2,8 +2,8 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { fetchTvShows } from '../../store/actions';
-import ListItem from '../../components/ListItem';
+import { fetchTvShows } from 'Common/store/actions';
+import ListItem from 'Common/components/ListItem';
 
 class Home extends Component {
   
