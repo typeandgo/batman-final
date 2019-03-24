@@ -1,9 +1,11 @@
-import { FETCH_TV_SHOWS } from '../actions';
+import { FETCH_SEASON_LIST } from '../actions';
 
 export default (state = [], action) => {
   switch (action.type) {
-    case FETCH_TV_SHOWS:
+    
+    case FETCH_SEASON_LIST:
       return action.payload;
+
     default:
       return state;
   }

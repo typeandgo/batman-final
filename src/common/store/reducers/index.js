@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import tvShowsReducer from './tvShowsReducer';
-import episodeReducer from './episodeReducer';
+import seasonListReducer from './seasonListReducer';
+import episodeListReducer from './episodeListReducer';
+import episodeDetailReducer from './episodeDetailReducer';
 
 export default combineReducers({
-  tvShows: tvShowsReducer,
-  episode: episodeReducer
+  seasons: seasonListReducer,
+  episodes: episodeListReducer,
+  episode: episodeDetailReducer
 });

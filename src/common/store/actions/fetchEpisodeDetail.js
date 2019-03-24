@@ -1,14 +1,14 @@
 import axios from 'axios';
 
-export const FETCH_EPISODE = 'Fetch_Episode';
+export const FETCH_EPISODE_DETAIL = 'Fetch_Episode_Detail';
 
-export const fetchEpisode = (episodeId) => async dispatch => {
+export const fetchEpisodeDetail = (episodeId) => async dispatch => {
   try {
 
     const res = await axios.get(`http://api.tvmaze.com/episodes/${episodeId}`);
 
     dispatch({
-      type: FETCH_EPISODE,
+      type: FETCH_EPISODE_DETAIL,
       payload: res.data
     });
   
@@ -21,7 +21,7 @@ export const fetchEpisode = (episodeId) => async dispatch => {
     };
 
     dispatch({
-      type: FETCH_EPISODE,
+      type: FETCH_EPISODE_DETAIL,
       payload: errorResponse
     });
   }

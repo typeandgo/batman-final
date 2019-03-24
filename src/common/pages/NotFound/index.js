@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import BottomNav from 'Common/components/BottomNav';
+import BackButton from 'Common/components/BackButton';
 
 const NotFound = ({ staticContext = {} }) => {
  
@@ -14,13 +14,13 @@ const NotFound = ({ staticContext = {} }) => {
         <title>Batman Tv Shows - Page Not Found</title>
       </Helmet>
 
+      <BackButton />
+
       <div className='card app-content'>
         <div className='card-body text-center'>
           <p>Page not found!</p>
         </div>
       </div>
-
-      <BottomNav />
     </div>
   );
 };

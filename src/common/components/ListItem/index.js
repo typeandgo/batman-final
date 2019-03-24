@@ -2,11 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const ListItem = ({ data }) => {
+const ListItem = ({ data, linkPrefix }) => {
   return (
     <li className='list-group-item'>
-      <Link to={ `/episode/${data.id}` }>
+      <Link to={ `/${ linkPrefix }/${ data.id }` }>
+
         { data.name }
+
       </Link>
     </li>
   );
@@ -15,5 +17,6 @@ const ListItem = ({ data }) => {
 export default ListItem;
 
 ListItem.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
+  linkPrefix: PropTypes.string.isRequired
 };

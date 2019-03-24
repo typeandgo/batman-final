@@ -2,19 +2,19 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import { fetchEpisode, clearEpisode } from 'Common/store/actions';
-import BottomNav from 'Common/components/BottomNav';
+import { fetchEpisodeDetail, clearEpisodeDetail } from 'Common/store/actions';
+import BackButton from 'Common/components/BackButton';
 
 class Episode extends Component {
   
   componentDidMount () {
     const episodeId = this.props.match.params.id;
 
-    this.props.fetchEpisode(episodeId);
+    this.props.fetchEpisodeDetail(episodeId);
   }
 
   componentWillUnmount () {
-    this.props.clearEpisode();
+    this.props.clearEpisodeDetail();
   }
 
   render () {
@@ -69,13 +69,13 @@ class Episode extends Component {
           <title>Batman Tv Shows - Episode Detail</title>
         </Helmet>
 
+        <BackButton />
+
         <div className='card app-content'>
 
           { episodeTemplate }
 
         </div>
-
-        <BottomNav />
       </Fragment>
     );
   }
@@ -85,17 +85,17 @@ const mapStateToProps = state => ({
   episode: state.episode,
 });
 
-export default connect(mapStateToProps, { fetchEpisode, clearEpisode })(Episode);
+export default connect(mapStateToProps, { fetchEpisodeDetail, clearEpisodeDetail })(Episode);
 
 export const loadDataEpisode = ({ dispatch }, urlParams) => {
   const episodeId = urlParams.id;
 
-  return dispatch(fetchEpisode(episodeId));
+  return dispatch(fetchEpisodeDetail(episodeId));
 };
 
 Episode.propTypes = {
   episode: PropTypes.object,
-  fetchEpisode: PropTypes.func,
-  clearEpisode: PropTypes.func,
+  fetchEpisodeDetail: PropTypes.func,
+  clearEpisodeDetail: PropTypes.func,
   match: PropTypes.object.isRequired
 };
