@@ -1,3 +1,9 @@
+# Projenin local ortama kurulması
+```
+git clone xxxx
+npm init
+```
+
 # 'Development' ortamında projenin yürütülmesi
 ```
 npm run dev
@@ -8,7 +14,7 @@ Bu komut gerekli bundle ve chunk'ları üretir ve 'watch' metodu ile her kod de�
 
 # 'Production' ortamında projenin yürütülmesi
 ```
-npm run prod
+npm run build
 ```
 
 Bu komut gerekli bundle ve chunk'ları üretir ve chunk'lara hash ekler. Yapılan değişiklikleri izlemez. Production çıktısı üretir.
