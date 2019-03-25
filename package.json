@@ -15,8 +15,8 @@
     "dev:client": "webpack --progress --config config/webpack.dev.client.js --watch",
     "dev:server": "webpack --progress --config config/webpack.dev.server.js --watch",
     "dev:start": "nodemon --watch ./dist --exec node ./dist/server.js",
-    "build": "rimraf ./dist && webpack --config config/webpack.prod.client.js && webpack --config config/webpack.prod.server.js",
-    "start": "node ./dist/server.js"
+    "build": "rimraf dist && webpack --config config/webpack.prod.client.js && webpack --config config/webpack.prod.server.js",
+    "start": "node dist/server.js"
   },
   "author": "Engin Öztürk",
   "license": "ISC",
