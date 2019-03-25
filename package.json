@@ -2,19 +2,19 @@
   "name": "batman-tv-shows",
   "version": "1.0.1",
   "description": "",
-  "main": "./src/server/index.js",
+  "main": "src/server/index.js",
   "engines": {
     "node": "8.10.x",
     "npm": "6.8.0"
   },
   "scripts": {
-    "stylelint": "stylelint ./src/styles/**/*.scss",
-    "eslint": "./node_modules/.bin/eslint ./src ",
-    "dev": "rimraf ./dist && npm run dev-pre && npm-run-all -p dev:*",
+    "stylelint": "stylelint src/styles/**/*.scss",
+    "eslint": "node_modules/.bin/eslint ./src ",
+    "dev": "rimraf dist && npm run dev-pre && npm-run-all -p dev:*",
     "dev-pre": "webpack --progress --config config/webpack.dev.client.js && webpack --progress --config config/webpack.dev.server.js",
     "dev:client": "webpack --progress --config config/webpack.dev.client.js --watch",
     "dev:server": "webpack --progress --config config/webpack.dev.server.js --watch",
-    "dev:start": "nodemon --watch ./dist --exec node ./dist/server.js",
+    "dev:start": "nodemon --watch dist --exec node dist/server.js",
     "build": "rimraf dist && webpack --config config/webpack.prod.client.js && webpack --config config/webpack.prod.server.js",
     "start": "node dist/server.js"
   },
